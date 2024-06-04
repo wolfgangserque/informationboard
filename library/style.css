@@ -1,0 +1,237 @@
+
+
+@font-face {
+  font-family: 'Lucida Sans';
+  src: url('font/lucida-sans-unicode.woff') format('.woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+body{
+  background-image: url(/img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: 'Lucida Sans';
+}
+
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position:absolute;
+  bottom: 200px;
+}
+
+.menu a{
+  margin: 40px;
+}
+
+.navigasi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.img-link{
+  display: flex;
+  align-items: center;
+}
+
+.img-link:hover{
+  transform: scale(1.1); /* Efek skala saat hover */
+}
+
+
+.back{
+  display:flex;
+  justify-content: center;
+}
+
+
+
+.navbar{
+  background-image: url(/img/bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.butoon{
+    font-size: 20pt;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    border: transparent;
+    width: 100%;
+    padding: 20px 100px;
+    border-radius: 50px;
+    background-image: url(/img/batiks0.jpg);
+    box-shadow: 0 4px 6px rgba(79, 5, 5, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border:3px solid rgb(151, 3, 3);
+}
+
+.butoon a {
+  color: white;
+  text-decoration: none;
+}
+
+.butoon:hover{
+    color: white;
+    background-color: rgb(164, 0, 0);
+    transform: scale(1.1); /* Efek skala saat hover */
+}
+
+
+/* Register */
+.register{
+  display: flex;
+  align-items: center;
+}
+
+
+.button{
+  font-size: 15pt;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  border: transparent;
+  width: 20%;
+  padding: 9px 30px;
+  border-radius: 50px;
+  background-image: url(/img/batiks1.jpg);
+  box-shadow: 0 4px 6px rgba(8, 36, 95, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border:3px solid #05214a;
+}
+
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover{
+  color: white;
+  background-color: rgb(164, 0, 0);
+  transform: scale(1.1); /* Efek skala saat hover */
+}
+
+
+
+
+
+
+
+/* Breakdown */
+
+@media (max-width: 991.98px) {
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+    .butoon{ 
+      font-size: 10pt;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+      border: transparent;
+      width: 100%;
+      padding: 9px 70px;
+      border-radius: 50px;
+      background-image: url(/img/batiks0.jpg);
+      border:3px solid rgb(151, 3, 3);
+      box-shadow: 0 4px 6px rgba(79, 5, 5, 0.6);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      
+  }
+  
+      .butoon:hover{
+      color: white;
+      background-color: rgb(164, 0, 0);
+      transform: scale(1.1); /* Efek skala saat hover */
+      }
+
+
+      /*  */
+
+      
+    .button{
+      font-size: 10pt;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+      border: transparent;
+      width: 40%;
+      padding: 10px 30px;
+      border-radius: 50px;
+      background-image: url(/img/batiks1.jpg);
+      box-shadow: 0 4px 6px rgba(8, 36, 95, 0.6);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border:3px solid #033b90;
+  }
+  
+      .button:hover{
+      color: white;
+      background-color: rgb(164, 0, 0);
+      transform: scale(1.1); /* Efek skala saat hover */
+      }
+
+
+
+
+
+
+
+  }
+
+
+
+  @media(min-width: 3840px) {
+
+      .container {
+        max-width: 1140px; /* Default Bootstrap container width for large screens */
+        }
+
+      .kontenisi .card{
+        padding:20px;
+        }
+
+      .kontenisi .card-img-top {
+        height: 30vw; /* Adjust height for 4K screens */
+        }
+
+    .kontenisi .card-title {
+        font-size: 2rem; /* Adjust font size for 4K screens */
+        }
+
+    .kontenisi .card-text {
+        font-size: 1.2rem; /* Adjust font size for 4K screens */
+       }
+
+
+  }
