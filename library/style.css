@@ -23,11 +23,11 @@ body{
   align-items: center;
   height: 100vh;
   position:absolute;
-  bottom: 200px;
+  bottom: 110px;
 }
 
 .menu a{
-  margin: 40px;
+  margin: 50px;
 }
 
 .navigasi{
