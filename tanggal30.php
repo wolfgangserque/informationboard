@@ -25,6 +25,8 @@
 
 <body style="background-image:url('img/acara/p3.png')">
 
+<?php include('components/logo.php'); ?>
+
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">

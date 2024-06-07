@@ -25,6 +25,8 @@
 
 <body style="background-image:url('img/acara/p1.png')">
 
+<?php include('components/logo.php'); ?>
+
 
 
   <!-- Navigasi Home Back-->
