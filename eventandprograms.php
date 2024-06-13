@@ -55,8 +55,8 @@
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 2500px;">
-    <a href="#"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="#"><img src="img/kanan.png" class="img-link" ></i></a>
+    <a href="index.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="tanggal28.php"><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
   <!-- Website -->

@@ -27,21 +27,20 @@
 <body>
   <!-- Logo -->
  <?php include('components/logo.php'); ?>
-  
-  <!-- 31 Agustus -->
-  <div class="container-fluid navigasi">
-    <div class="align-self-center" style="position: absolute; top:755px;">
-      <a href="#"><img src="img/title/title_mediainform_event.png" class="img-link"></a>
+
+   <!-- 31 Agustus -->
+   <div class="container-fluid navigasi">
+    <div class="align-self-center" style="position: absolute; top:900px;">
+      <a href="#"><img src="img/title/title_info_board.png" class="img-link"></a>
     </div>
   </div>
+
   
   <!-- Menu Tanggal -->
   <div class="container-fluid menu">
     <div class="d-grid gap-2">
-      <a href="eventandprograms.php"><img src="img/navigasimenu/index1eventprograms.png" class="img-link"></a>
-      <a href="exhibitionpartners.php"><img src="img/navigasimenu/index2exhibitionpartners.png" class="img-link"></a>
-      <a href="aboutjogja.php"><img src="img/navigasimenu/index3aboutyogya.png" class="img-link"></a>
-      <a href="otherinformation.php"><img src="img/navigasimenu/index4otherinformation.png" class="img-link"></a>
+      <a href="informationevent.php"><img src="img/navigasimenu/media_inform_event.png" class="img-link"></a>
+      <a href="callforpaper.php"><img src="img/navigasimenu/media_inform_cfp.png" class="img-link"></a>
     </div>  
   </div>
   

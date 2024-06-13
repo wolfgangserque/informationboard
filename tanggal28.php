@@ -29,14 +29,14 @@
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
-      <a href="eventandprograms.php.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
+      <a href="eventandprograms.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
       <a id="backButton"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="index.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="eventandprograms.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
     <a href="tanggal29.php"><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
