@@ -24,47 +24,32 @@
   
 </head>
 
-<body>
+<body style="background-image:url(img/acara/about_jogja.jpg)">
   <!-- Logo -->
  <?php include('components/logo.php'); ?>
   
   <!-- 31 Agustus -->
   <div class="container-fluid navigasi">
-    <div class="align-self-center" style="position: absolute; top:755px;">
-      <a href="#"><img src="img/title/title_mediainform_event.png" class="img-link"></a>
+    <div class="align-self-center" style="position: absolute; top:750px;">
+      <a href="#"><img src="img/title/title_aboutjogja.png" class="img-link"></a>
     </div>
   </div>
   
-  <!-- Menu Tanggal -->
-  <div class="container-fluid menu">
-    <div class="d-grid gap-2">
-      <a href="eventandprograms.php"><img src="img/navigasimenu/index1eventprograms.png" class="img-link"></a>
-      <a href="exhibitionpartners.php"><img src="img/navigasimenu/index2exhibitionpartners.png" class="img-link"></a>
-      <a href="aboutjogja.php"><img src="img/navigasimenu/index3aboutyogya.png" class="img-link"></a>
-      <a href="otherinformation.php"><img src="img/navigasimenu/index4otherinformation.png" class="img-link"></a>
-    </div>  
-  </div>
   
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
-    <div class="align-self-center" style="display: flex; position: absolute; top: 2325px;">
+    <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
       <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
       <a id="backButton"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
   
   <!-- Navigasi Kembali -->
-  <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 2500px;">
-    <a href="#"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="eventandprograms.php"><img src="img/kanan.png" class="img-link" ></i></a>
+  <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
+    <a href="exhibitionpartners.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="otherinformation.php"><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
-  <!-- Website -->
-  <div class="container-fluid">
-    <div class="align-self-center" style="display: flex; justify-content: center;align-items: center; position: absolute; top: 3350px; left: 22%;">
-      <a href="pci-ioss-isassap2024.com"><img src="img/website.png" class="img-link"></a>
-    </div>
-  </div>
 
 <script src="library/lightbox/lightbox-plus-jquery.js"></script>
 <script src="library/bs/bootstrap.min.js"></script>

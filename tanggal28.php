@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PCI IOSS ISASS AP 2024</title>
-
   <link href="library/bs/bootstrap.min.css" rel="stylesheet">
   <link href="library/style.css" rel="stylesheet">
   <link href="library/lightbox/lightbox.css" rel="stylesheet">
@@ -27,12 +26,10 @@
 
 <?php include('components/logo.php'); ?>
 
-
-
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
-      <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
+      <a href="eventandprograms.php.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
       <a id="backButton"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
