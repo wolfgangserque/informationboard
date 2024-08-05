@@ -39,8 +39,8 @@
   <!-- Menu Tanggal -->
   <div class="container-fluid menu">
     <div class="d-grid gap-2">
-      <a href="informationevent.php"><img src="img/navigasimenu/media_inform_event.png" class="img-link"></a>
-      <a href="callforpaper.php"><img src="img/navigasimenu/media_inform_cfp.png" class="img-link"></a>
+      <a href="informationevent.php"><img src="img/navigasimenu/main_event-programs.png" class="img-link"></a>
+      <a href="callforpaper.php"><img src="img/navigasimenu/main_paperposterpresentation.png" class="img-link"></a>
     </div>  
   </div>
   

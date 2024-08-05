@@ -29,7 +29,7 @@
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
-      <a href="eventandprograms.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
+      <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
       <a id="backButton"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
