@@ -41,7 +41,7 @@
   <div class="container-fluid menu">
     <div class="d-grid gap-2">
       <a href="presentation_schedule.php"><img src="img/navigasimenu/presentation_schedule.png" class="img-link"></a>
-      <a href="paper_abstraction.php"><img src="img/navigasimenu/paper_abstraction.png" class="img-link"></a>
+      <a href="cfp.php"><img src="img/navigasimenu/paper_abstraction.png" class="img-link"></a>
     </div>  
   </div>
   

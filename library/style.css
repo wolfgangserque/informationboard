@@ -54,6 +54,23 @@ body{
 }
 
 
+.input-group.mb-4.searchbox {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.input-group-text {
+  font-size: 40pt;
+  border-radius: 40px;
+}
+
+.form-control {
+  border-radius: 40px;
+  font-size: 50pt;
+  margin-left: 30px;
+}
 
 .navbar{
   background-size: cover;
