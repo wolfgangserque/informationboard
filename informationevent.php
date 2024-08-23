@@ -39,9 +39,9 @@
   <div class="container-fluid menu">
     <div class="d-grid gap-2">
       <a href="eventandprograms.php"><img src="img/navigasimenu/index1eventprograms.png" class="img-link"></a>
-      <a href="exhibitionpartners.php"><img src="img/navigasimenu/index2exhibitionpartners.png" class="img-link"></a>
+      <a href="our_partners.php"><img src="img/navigasimenu/index2exhibitionpartners.png" class="img-link"></a>
       <a href="aboutjogja.php"><img src="img/navigasimenu/index3aboutyogya.png" class="img-link"></a>
-      <a href="otherinformation.php"><img src="img/navigasimenu/index4otherinformation.png" class="img-link"></a>
+      <a href="other_info.php"><img src="img/navigasimenu/index4otherinformation.png" class="img-link"></a>
     </div>  
   </div>
   

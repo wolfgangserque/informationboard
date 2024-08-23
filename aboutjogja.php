@@ -24,17 +24,8 @@
   
 </head>
 
-<body style="background-image:url(img/acara/about_jogja.jpg)">
-  <!-- Logo -->
- <?php include('components/logo.php'); ?>
-  
-  <!-- 31 Agustus -->
-  <div class="container-fluid navigasi">
-    <div class="align-self-center" style="position: absolute; top:750px;">
-      <a href="#"><img src="img/title/title_aboutjogja.png" class="img-link"></a>
-    </div>
-  </div>
-  
+<body style="background-image:url(img/about_jogja/welcome.jpg)">
+
   
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
@@ -46,8 +37,8 @@
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="exhibitionpartners.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="otherinformation.php"><img src="img/kanan.png" class="img-link" ></i></a>
+    <a href="informationevent.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="aboutjogja2.php"><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
 

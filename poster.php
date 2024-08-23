@@ -98,32 +98,45 @@ if(!$result) {
 </div>
 
 <div class="scrollable-content">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 kontenisi" style="margin-left:auto; margin-right:auto;">
-        <?php
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                $image_name = $row['image_name'];
-                $image_data = base64_encode($row['image_data']);
-                $title = $row['title'];
-        ?>
-        <div class="col">
-            <div class="card">
-                <a href="data:image/jpeg;base64,<?php echo $image_data; ?>" data-lightbox="mygallery" data-title="<?php echo $title; ?>">
-                    <img src="data:image/jpeg;base64,<?php echo $image_data; ?>" class="card-img-top" alt="<?php echo $title; ?>">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title text-center mt-4"><?php echo $title; ?></h4>
-                </div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 kontenisi" style="margin-left:auto; margin-right:auto;">
+    <?php
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $image_name = $row['image_name'];
+            $image_data = base64_encode($row['image_data']);
+            $title = $row['title'];
+    ?>
+    <div class="col">
+        <div class="card h-100" style="display: flex; flex-direction: column;">
+            <a href="data:image/jpeg;base64,<?php echo $image_data; ?>" data-lightbox="mygallery" data-title="<?php echo $title; ?>">
+                <img src="data:image/jpeg;base64,<?php echo $image_data; ?>" class="card-img-top" alt="<?php echo $title; ?>">
+            </a>
+            <div class="card-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <h4 class="card-title text-center" style="
+                    display: -webkit-box;
+                    -webkit-line-clamp: 7;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-height: calc(1.2em * 7);
+                    line-height: 1.2em;
+                ">
+                    <?php echo $title; ?>
+                </h4>
             </div>
         </div>
-        <?php
-            }
-        } else {
-            echo "No images found.";
-        }
-        $conn->close();
-        ?>
     </div>
+    <?php
+        }
+    } else {
+        echo "No images found.";
+    }
+    $conn->close();
+    ?>
+</div>
+
+
 </div>
 
 <!-- Navigasi Home Back-->

@@ -23,9 +23,18 @@
    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 
-<body style="background-image:url('img/acara/p2.png')">
+<body style="background-image:url('img/bg_polos.jpg')">
 
 <?php include('components/logo.php'); ?>
+
+
+<div class="container-fluid navigasi">
+    <div class="align-self-center" style="position: absolute; top:650px;">
+      <img src="img/event/FLYER A4 WS - MOTION PRESERVING 03 POLOS.jpg">
+    </div>
+  </div>
+
+
 
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
@@ -38,7 +47,7 @@
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
     <a href="tanggal28.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="tanggal30.php" ><img src="img/kanan.png" class="img-link" ></i></a>
+    <a href="tanggal29_2.php" ><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
 

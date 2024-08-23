@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PCI IOSS ISASS AP 2024</title>
+
   <link href="library/bs/bootstrap.min.css" rel="stylesheet">
   <link href="library/style.css" rel="stylesheet">
   <link href="library/lightbox/lightbox.css" rel="stylesheet">
@@ -21,16 +22,14 @@
    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
-
 <body style="background-image:url('img/bg_polos.jpg')">
 
 <?php include('components/logo.php'); ?>
 
 
- <!-- 31 Agustus -->
- <div class="container-fluid navigasi">
+<div class="container-fluid navigasi">
     <div class="align-self-center" style="position: absolute; top:650px;">
-      <img src="img/event/FLYER A4 WS - ENDOSCOPY 03 POLOS.jpg">
+      <img src="img/event/CULTURAL NIGHT INVITATION 02.jpg">
     </div>
   </div>
 
@@ -45,8 +44,8 @@
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="eventandprograms.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="tanggal29.php"><img src="img/kanan.png" class="img-link" ></i></a>
+    <a href="tanggal29.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="tanggal31.php" ><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
 
@@ -54,7 +53,6 @@
 <script src="library/bs/bootstrap.min.js"></script>
 <script src="library/script.js"></script>
 <script src="library/buttonback.js"></script>
-
 </body>
 
 </html>
