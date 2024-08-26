@@ -1,42 +1,39 @@
 <?php
-// File: poster-presentation.php
+// Direktori tempat file PDF disimpan
+$directory = "paper/";
 
-// Koneksi ke database
-$servername = "localhost";
-$username = "root"; // Ganti dengan username MySQL Anda
-$password = ""; // Ganti dengan password MySQL Anda
-$dbname = "db_pci";
-
-// Membuat koneksi ke database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Logika Pencarian
+// Mendapatkan parameter pencarian
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-// Modifikasi query untuk pencarian
-$search_query = "";
-if ($search) {
-    $search_query = "AND (image_name LIKE '%$search%' OR title LIKE '%$search%')";
+// Fungsi untuk mendapatkan file PDF dari direktori
+function getPdfs($directory, $search) {
+    $pdfs = array();
+
+    if (is_dir($directory)) {
+        if ($dh = opendir($directory)) {
+            while (($file = readdir($dh)) !== false) {
+                // Hanya menampilkan file dengan ekstensi .pdf
+                if (preg_match('/\.pdf$/i', $file)) {
+                    // Cek apakah ada pencarian dan cocokkan dengan nama file
+                    if ($search && stripos($file, $search) === false) {
+                        continue;
+                    }
+                    $pdfs[] = $file;
+                }
+            }
+            closedir($dh);
+        }
+    }
+
+    return $pdfs;
 }
 
-// Query untuk mengambil semua data gambar dengan pencarian
-$sql = "SELECT image_name, image_data, title FROM images WHERE is_active = 1 $search_query ORDER BY id ASC";
-
-$result = $conn->query($sql);
-
-if(!$result) {
-    die("Error in selection query: " . $conn->error);
-}
-
+// Mendapatkan daftar PDF
+$pdfs = getPdfs($directory, $search);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -46,7 +43,6 @@ if(!$result) {
 
     <link href="library/bs/bootstrap.min.css" rel="stylesheet">
     <link href="library/style.css" rel="stylesheet">
-    <link href="library/lightbox/lightbox.css" rel="stylesheet">
     <link href="library/animate/animate.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,14 +52,72 @@ if(!$result) {
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link href="library/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="library/bs/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        h5 {
+            color: black;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover h5 {
+            transform: scale(1.05);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+
         .scrollable-content {
-            max-height: 60vh; /* Sesuaikan dengan kebutuhan Anda */
+            max-height: 60vh;
             overflow-y: auto;
-            padding: 150px; /* Tambahan padding untuk scrollbar */
-            
+            padding: 150px;
+            margin-top: 700px;
+        }
+
+        .pdf-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pdf-gallery .pdf-item {
+            flex: 1 1 300px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        /* Kustomisasi ukuran modal agar lebih besar */
+        .modal-4k {
+            max-width: 90%;
+            width: 90%;
+        }
+
+        .modal-body iframe {
+            height: 90vh;
         }
     </style>
 </head>
@@ -72,77 +126,71 @@ if(!$result) {
 
 <?php include('components/logo.php'); ?>
 
-<div class="input-group mb-4 searchbox" style="margin-top: 650px; width: 1500px; margin-left: auto; margin-right: auto;">
-    <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-search p-5"></i></span>
-    <input type="text" class="form-control" aria-label="Search cards" value="<?php echo htmlspecialchars($search); ?>" oninput="searchFilter()" id="searchInput">
-    <script>
-        let typingTimer;                // Timer identifier
-        let doneTypingInterval = 500;  // Waktu tunggu dalam milidetik
-
-        const searchInput = document.getElementById('searchInput');
-
-        function searchFilter() {
-            clearTimeout(typingTimer);
-            typingTimer = setTimeout(function() {
-                const search = searchInput.value;
-                if (search !== "") {
-                    window.location.href = "?search=" + encodeURIComponent(search);
-                }
-            }, doneTypingInterval);
-        }
-
-        searchInput.addEventListener('keyup', function() {
-            clearTimeout(typingTimer);
-        });
-    </script>
-</div>
-
-<div class="scrollable-content">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 kontenisi" style="margin-left:auto; margin-right:auto;">
+<div class="scrollable-content pdf-gallery">
+    <div class="container">
+        <div class="row">
         <?php
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                $image_name = $row['image_name'];
-                $image_data = base64_encode($row['image_data']);
-                $title = $row['title'];
-        ?>
-        <div class="col">
-            <div class="card">
-                <a href="data:image/jpeg;base64,<?php echo $image_data; ?>" data-lightbox="mygallery" data-title="<?php echo $title; ?>">
-                    <img src="data:image/jpeg;base64,<?php echo $image_data; ?>" class="card-img-top" alt="<?php echo $title; ?>">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title text-center mt-4"><?php echo $title; ?></h4>
+        if (count($pdfs) > 0) {
+            foreach ($pdfs as $pdf) {
+                $thumbnail_path = "img/thumbnails/" . pathinfo($pdf, PATHINFO_FILENAME) . "-thumb.png";
+                ?>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="pdf-item">
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#pdfModal" data-bs-pdf="<?php echo $directory . $pdf; ?>">
+                            <img src="<?php echo $thumbnail_path; ?>" class="thumbnail" alt="<?php echo $pdf; ?>">
+                            <h5 class="mt-2"><?php echo pathinfo($pdf, PATHINFO_FILENAME); ?></h5>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <?php
+                <?php
             }
         } else {
-            echo "No images found.";
+            echo "<p>File PDF tidak ditemukan.</p>";
         }
-        $conn->close();
         ?>
+        </div>
     </div>
 </div>
 
-<!-- Navigasi Home Back-->
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-4k modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">Tampilan PDF</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Tampilkan PDF di sini -->
+                <iframe id="pdfIframe" src="" frameborder="0" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigasi Home Back -->
 <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
         <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
-        <a id="backButton"><img src="img/back.png" class="img-link"></a>
+        <a href="freepaperpresentation.php"><img src="img/back.png" class="img-link"></a>
     </div>
 </div>
 
-<!-- Navigasi Kembali -->
-<div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="freepaperpresentation.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></a>
-    <a href="index.php"><img src="img/kanan.png" class="img-link"></a>
-</div>
-
-<script src="library/lightbox/lightbox-plus-jquery.js"></script>
 <script src="library/bs/bootstrap.min.js"></script>
-<script src="library/script.js"></script>
+<script>
+    // Tangkap event ketika modal terbuka
+    document.getElementById('pdfModal').addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget; // Tombol yang memicu modal
+        var pdfUrl = button.getAttribute('data-bs-pdf'); // Ambil URL PDF dari atribut data-bs-pdf
+        var modalIframe = document.getElementById('pdfIframe');
+        modalIframe.src = pdfUrl; // Set URL PDF ke dalam iframe
+    });
+
+    // Bersihkan URL iframe ketika modal ditutup untuk optimisasi
+    document.getElementById('pdfModal').addEventListener('hidden.bs.modal', function () {
+        document.getElementById('pdfIframe').src = '';
+    });
+</script>
 
 </body>
 

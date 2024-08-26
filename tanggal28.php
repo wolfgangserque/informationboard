@@ -39,7 +39,7 @@
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
       <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
-      <a id="backButton"><img src="img/back.png" class="img-link"></a>
+      <a href="eventandprograms.php"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
   
@@ -52,7 +52,7 @@
 
 <script src="library/lightbox/lightbox-plus-jquery.js"></script>
 <script src="library/bs/bootstrap.min.js"></script>
-<script src="library/script.js"></script>
+<script src="library/script.js"></script> 
 <script src="library/buttonback.js"></script>
 
 </body>

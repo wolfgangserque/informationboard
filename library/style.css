@@ -9,7 +9,7 @@
 
 
 body{
-  background-image: url('../img/bgrev.jpg');
+  background-image: url('../img/background-scann.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -36,6 +36,82 @@ body{
   align-items: center;
 
 }
+
+
+/* Style lightbox untuk pdf */
+/* Galeri PDF responsif */
+.pdf-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Menyesuaikan ukuran thumbnail */
+.pdf-gallery .pdf-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Lightbox overlay untuk menampilkan PDF */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Menyesuaikan ukuran PDF viewer */
+.lightbox-overlay .pdf-viewer {
+  width: 2160px; /* Lebar yang diinginkan untuk layar 4K */
+  max-width: 100%; /* Memastikan responsif */
+  height: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Iframe PDF menyesuaikan layar */
+.lightbox-overlay .pdf-viewer iframe {
+  width: 100%;
+  height: 80vh; /* Tinggi yang proporsional */
+}
+
+/* Tombol close */
+.lightbox-overlay .close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+/* Style lightbox untuk pdf */
+
 
 
 .img-link{

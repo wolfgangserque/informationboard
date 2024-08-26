@@ -23,7 +23,7 @@
    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 
-<body style="background-image:url('img/acara/presentation_sch.png')">
+<body style="background-image:url('img/bg_polos.jpg')">
 
 <?php include('components/logo.php'); ?>
 

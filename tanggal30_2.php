@@ -52,7 +52,7 @@
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 2325px;">
       <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
-      <a id="backButton"><img src="img/back.png" class="img-link"></a>
+      <a href="eventandprograms.php"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
   
@@ -65,7 +65,7 @@
   <!-- Website -->
   <div class="container-fluid">
     <div class="align-self-center" style="display: flex; justify-content: center;align-items: center; position: absolute; top: 3350px; left: 22%;">
-      <a href="pci-ioss-isassap2024.com"><img src="img/website.png" class="img-link"></a>
+      <a href="https://pci-ioss-isassap2024.com"><img src="img/website.png" class="img-link"></a>
     </div>
   </div>
 

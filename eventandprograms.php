@@ -54,10 +54,10 @@
   </div>
   
   <!-- Navigasi Kembali -->
-  <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 2500px;">
+  <!-- <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 2500px;">
     <a href="index.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
     <a href="tanggal28.php"><img src="img/kanan.png" class="img-link" ></i></a>
-  </div>
+  </div> -->
 
   <!-- Website -->
   <div class="container-fluid">

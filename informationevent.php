@@ -54,15 +54,15 @@
   </div>
   
   <!-- Navigasi Kembali -->
-  <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 2500px;">
+  <!-- <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 2500px;">
     <a href="#"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
     <a href="eventandprograms.php"><img src="img/kanan.png" class="img-link" ></i></a>
-  </div>
+  </div> -->
 
   <!-- Website -->
   <div class="container-fluid">
     <div class="align-self-center" style="display: flex; justify-content: center;align-items: center; position: absolute; top: 3350px; left: 22%;">
-      <a href="pci-ioss-isassap2024.com"><img src="img/website.png" class="img-link"></a>
+      <a href="https://pci-ioss-isassap2024.com"><img src="img/website.png" class="img-link"></a>
     </div>
   </div>
 
