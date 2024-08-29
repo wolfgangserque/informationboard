@@ -83,7 +83,7 @@ $images = getImages($directory, $search); // Selalu akan menjadi array, meskipun
     }
 
     .modal-navigation:hover {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .modal-navigation.left {
