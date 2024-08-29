@@ -30,7 +30,7 @@
 
 <div class="container-fluid navigasi">
     <div class="align-self-center" style="position: absolute; top:650px;">
-      <img src="img/event/FLYER A4 WS - MOTION PRESERVING 03 POLOS.jpg">
+      <img src="img/event/FLYER A4 WS - SCOLIOSIS 03 POLOS.jpg">
     </div>
   </div>
 

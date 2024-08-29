@@ -44,8 +44,8 @@
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="tanggal29.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="tanggal31.php" ><img src="img/kanan.png" class="img-link" ></i></a>
+    <a href="tanggal30_2.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1120px;"></i></a>
+    <!-- <a href="tanggal31.php" ><img src="img/kanan.png" class="img-link" ></i></a> -->
   </div>
 
 
