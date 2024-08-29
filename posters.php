@@ -7,7 +7,7 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
 
 // Fungsi untuk mendapatkan file gambar dari direktori
 function getImages($directory, $search) {
-    $images = array();
+    $images = array(); // Inisialisasi array kosong
 
     if (is_dir($directory)) {
         if ($dh = opendir($directory)) {
@@ -18,18 +18,18 @@ function getImages($directory, $search) {
                     if ($search && stripos($file, $search) === false) {
                         continue;
                     }
-                    $images[] = $file;
+                    $images[] = $file; // Tambahkan file ke dalam array
                 }
             }
             closedir($dh);
         }
     }
 
-    return $images;
+    return $images; // Mengembalikan array gambar, meskipun kosong
 }
 
 // Mendapatkan daftar gambar
-$images = getImages($directory, $search);
+$images = getImages($directory, $search); // Selalu akan menjadi array, meskipun kosong
 ?>
 
 <!DOCTYPE html>
@@ -55,51 +55,60 @@ $images = getImages($directory, $search);
     <link href="library/bs/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
-        .scrollable-content {
-            max-height: 60vh;
-            overflow-y: auto;
-            padding: 150px;
-        }
+    .scrollable-content {
+        max-height: 60vh;
+        overflow-y: auto;
+        padding: 150px;
+    }
 
-        .modal-img {
-            width: 100%;
-            height: auto;
-        }
+    .modal-img {
+        width: 100%;
+        height: auto;
+    }
 
-        .modal-lg {
-            max-width: 80%;
-        }
+    .modal-lg {
+        max-width: 80%;
+    }
 
-        .modal-navigation {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 20px;
-            cursor: pointer;
-            z-index: 1000;
-            font-size: 2rem;
-        }
+    .modal-navigation {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.25);
+        color: white;
+        padding: 80px; /* Diperbesar 4x dari 20px */
+        cursor: pointer;
+        z-index: 1000;
+        font-size: 8rem; /* Diperbesar 4x dari 2rem */
+    }
 
-        .modal-navigation:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
+    .modal-navigation:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 
-        .modal-navigation.left {
-            left: -60px;
-        }
+    .modal-navigation.left {
+        left: -60px;
+    }
 
-        .modal-navigation.right {
-            right: -60px;
-        }
+    .modal-navigation.right {
+        right: -60px;
+    }
 
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    </style>
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Tambahan untuk memperbesar tombol close */
+    .btn-close {
+        width: 2rem; /* Ukuran lebar tombol close diperbesar */
+        height: 2rem; /* Ukuran tinggi tombol close diperbesar */
+        padding: 0.75rem; /* Tambahan padding untuk memperbesar tombol */
+        font-size: 1.5rem; /* Memperbesar ikon "X" di dalam tombol */
+    }
+</style>
+
 </head>
 
 <body style="background-image:url('img/bg_polos.jpg')">
@@ -133,7 +142,7 @@ $images = getImages($directory, $search);
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 kontenisi" style="margin-left:auto; margin-right:auto;">
         <?php
         // Menampilkan gambar
-        if (count($images) > 0) {
+        if (is_array($images) && count($images) > 0) {
             foreach ($images as $index => $image) {
                 $image_path = $directory . $image;
                 ?>

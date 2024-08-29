@@ -57,6 +57,34 @@
 <script src="library/bs/bootstrap.min.js"></script>
 <script src="library/script.js"></script>
 <script src="library/buttonback.js"></script>
+
+<!-- Tambahan JavaScript untuk Deteksi Geser -->
+<script>
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleSwipe() {
+    const minSwipeDistance = 50;
+
+    if (touchEndX < touchStartX - minSwipeDistance) {
+      // Geser kiri (Tidak ada halaman setelahnya)
+      window.location.href = 'eventandprograms.php'; // Ganti dengan halaman berikutnya jika ada
+    } else if (touchEndX > touchStartX + minSwipeDistance) {
+      // Geser kanan
+      window.location.href = 'tanggal31.php';
+    }
+  }
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+</script>
+
 </body>
 
 </html>

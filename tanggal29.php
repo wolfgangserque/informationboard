@@ -27,14 +27,11 @@
 
 <?php include('components/logo.php'); ?>
 
-
 <div class="container-fluid navigasi">
     <div class="align-self-center" style="position: absolute; top:650px;">
-      <img src="img/event/FLYER A4 WS - MOTION PRESERVING 03 POLOS.jpg">
+      <img src="img/event/FLYER A4 WS - SCOLIOSIS 03 POLOS.jpg">
     </div>
   </div>
-
-
 
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
@@ -46,15 +43,41 @@
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="eventandprograms.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="tanggal28.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
     <a href="tanggal29_2.php" ><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
-
 
 <script src="library/lightbox/lightbox-plus-jquery.js"></script>
 <script src="library/bs/bootstrap.min.js"></script>
 <script src="library/script.js"></script>
 <script src="library/buttonback.js"></script>
+
+<!-- Tambahan JavaScript untuk Deteksi Geser -->
+<script>
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleSwipe() {
+    const minSwipeDistance = 50;
+
+    if (touchEndX < touchStartX - minSwipeDistance) {
+      // Geser kiri
+      window.location.href = 'tanggal29_2.php';
+    } else if (touchEndX > touchStartX + minSwipeDistance) {
+      // Geser kanan
+      window.location.href = 'tanggal28.php';
+    }
+  }
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+</script>
 </body>
 
 </html>

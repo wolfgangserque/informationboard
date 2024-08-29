@@ -31,7 +31,7 @@
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
       <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
-      <a href="eventandprograms.php"><img src="img/back.png" class="img-link"></a>
+      <a href="informationevent.php"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
   
@@ -46,6 +46,34 @@
 <script src="library/bs/bootstrap.min.js"></script>
 <script src="library/script.js"></script>
 <script src="library/buttonback.js"></script>
+
+
+<script>
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleSwipe() {
+    const minSwipeDistance = 50;
+
+    if (touchEndX < touchStartX - minSwipeDistance) {
+      // Geser kiri (Tidak ada halaman setelahnya)
+      window.location.href = 'aboutjogja2.php'; // Ganti dengan halaman berikutnya jika ada
+    } else if (touchEndX > touchStartX + minSwipeDistance) {
+      // Geser kanan
+      window.location.href = 'informationevent.php';
+    }
+  }
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+</script>
+
 
 </body>
 
