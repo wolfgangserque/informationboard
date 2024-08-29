@@ -40,7 +40,7 @@
   <!-- Menu Tanggal -->
   <div class="container-fluid menu">
     <div class="d-grid gap-2">
-      <a href="presentation_schedule.php"><img src="img/navigasimenu/presentation_schedule.png" class="img-link"></a>
+      <a href="schedule1.php"><img src="img/navigasimenu/presentation_schedule.png" class="img-link"></a>
       <a href="cfp.php"><img src="img/navigasimenu/paper_presentation.png" class="img-link"></a>
     </div>  
   </div>

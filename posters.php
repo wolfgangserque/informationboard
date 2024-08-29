@@ -87,11 +87,11 @@ $images = getImages($directory, $search); // Selalu akan menjadi array, meskipun
     }
 
     .modal-navigation.left {
-        left: -60px;
+        left: -180px;
     }
 
     .modal-navigation.right {
-        right: -60px;
+        right: -180px;
     }
 
     .modal-header {

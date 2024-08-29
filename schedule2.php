@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PCI IOSS ISASS AP 2024</title>
-
   <link href="library/bs/bootstrap.min.css" rel="stylesheet">
   <link href="library/style.css" rel="stylesheet">
   <link href="library/lightbox/lightbox.css" rel="stylesheet">
@@ -28,35 +27,34 @@
 <?php include('components/logo.php'); ?>
 
 
-<div class="container-fluid navigasi">
+ <!-- 31 Agustus -->
+ <div class="container-fluid navigasi">
     <div class="align-self-center" style="position: absolute; top:650px;">
-      <img src="img/event/GALA DINNER INVITATION 05.jpg">
+      <img src="img/schedule/paper_pres2.jpg">
     </div>
   </div>
-
-
-
 
 
   <!-- Navigasi Home Back-->
   <div class="container-fluid navigasi">
     <div class="align-self-center" style="display: flex; position: absolute; top: 3200px;">
       <a href="index.php"><img src="img/home.png" class="img-link" style="margin-right: 520px;"></a>
-      <a href="eventandprograms.php"><img src="img/back.png" class="img-link"></a>
+      <a href="freepaperpresentation.php"><img src="img/back.png" class="img-link"></a>
     </div>
   </div>
   
   <!-- Navigasi Kembali -->
   <div class="container-fluid d-flex justify-content-center" style="position: absolute; top: 3325px;">
-    <a href="tanggal31.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
-    <a href="informationevent.php" ><img src="img/kanan.png" class="img-link" ></i></a>
+    <a href="schedule1.php"><img src="img/kiri.png" class="img-link" style="margin-right: 1010px;"></i></a>
+    <a href="freepaperpresentation.php"><img src="img/kanan.png" class="img-link" ></i></a>
   </div>
 
 
 <script src="library/lightbox/lightbox-plus-jquery.js"></script>
 <script src="library/bs/bootstrap.min.js"></script>
-<script src="library/script.js"></script>
+<script src="library/script.js"></script> 
 <script src="library/buttonback.js"></script>
+
 
 <!-- Tambahan JavaScript untuk Deteksi Geser -->
 <script>
@@ -68,10 +66,10 @@
 
     if (touchEndX < touchStartX - minSwipeDistance) {
       // Geser kiri (Tidak ada halaman setelahnya)
-      window.location.href = 'eventandprograms.php'; // Ganti dengan halaman berikutnya jika ada
+      window.location.href = 'tanggal29.php'; // Ganti dengan halaman berikutnya jika ada
     } else if (touchEndX > touchStartX + minSwipeDistance) {
       // Geser kanan
-      window.location.href = 'tanggal31.php';
+      window.location.href = 'eventandprograms.php';
     }
   }
 
@@ -84,6 +82,7 @@
     handleSwipe();
   });
 </script>
+
 
 </body>
 
