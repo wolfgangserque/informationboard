@@ -57,31 +57,7 @@
 
 
 <!-- Tambahan JavaScript untuk Deteksi Geser -->
-<script>
-  let touchStartX = 0;
-  let touchEndX = 0;
 
-  function handleSwipe() {
-    const minSwipeDistance = 50;
-
-    if (touchEndX < touchStartX - minSwipeDistance) {
-      // Geser kiri (Tidak ada halaman setelahnya)
-      window.location.href = 'tanggal29.php'; // Ganti dengan halaman berikutnya jika ada
-    } else if (touchEndX > touchStartX + minSwipeDistance) {
-      // Geser kanan
-      window.location.href = 'eventandprograms.php';
-    }
-  }
-
-  document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  document.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-</script>
 
 
 </body>
